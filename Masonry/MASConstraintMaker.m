@@ -10,7 +10,6 @@
 #import "MASViewConstraint.h"
 #import "MASCompositeConstraint.h"
 #import "MASConstraint+Private.h"
-#import "MASViewAttribute.h"
 #import "View+MASAdditions.h"
 
 @interface MASConstraintMaker () <MASConstraintDelegate>
@@ -53,7 +52,7 @@
 - (void)constraint:(MASConstraint *)constraint shouldBeReplacedWithConstraint:(MASConstraint *)replacementConstraint {
     NSUInteger index = [self.constraints indexOfObject:constraint];
     NSAssert(index != NSNotFound, @"Could not find constraint %@", constraint);
-    [self.constraints replaceObjectAtIndex:index withObject:replacementConstraint];
+    self.constraints[index] = replacementConstraint;
 }
 
 - (MASConstraint *)constraint:(MASConstraint *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
@@ -251,7 +250,7 @@
         NSInteger previousCount = self.constraints.count;
         group();
 
-        NSArray *children = [self.constraints subarrayWithRange:NSMakeRange(previousCount, self.constraints.count - previousCount)];
+        NSArray *children = [self.constraints subarrayWithRange:NSMakeRange((NSUInteger) previousCount, self.constraints.count - previousCount)];
         MASCompositeConstraint *constraint = [[MASCompositeConstraint alloc] initWithChildren:children];
         constraint.delegate = self;
         return constraint;

@@ -11,7 +11,7 @@
 
 @implementation NSArray (MASAdditions)
 
-- (NSArray *)mas_makeConstraints:(void(^)(MASConstraintMaker *make))block {
+- (NSArray *)mas_makeConstraints:(void(NS_NOESCAPE ^)(MASConstraintMaker *make))block {
     NSMutableArray *constraints = [NSMutableArray array];
     for (MAS_VIEW *view in self) {
         NSAssert([view isKindOfClass:[MAS_VIEW class]], @"All objects in the array must be views");
@@ -20,7 +20,7 @@
     return constraints;
 }
 
-- (NSArray *)mas_updateConstraints:(void(^)(MASConstraintMaker *make))block {
+- (NSArray *)mas_updateConstraints:(void(NS_NOESCAPE ^)(MASConstraintMaker *make))block {
     NSMutableArray *constraints = [NSMutableArray array];
     for (MAS_VIEW *view in self) {
         NSAssert([view isKindOfClass:[MAS_VIEW class]], @"All objects in the array must be views");
@@ -29,7 +29,7 @@
     return constraints;
 }
 
-- (NSArray *)mas_remakeConstraints:(void(^)(MASConstraintMaker *make))block {
+- (NSArray *)mas_remakeConstraints:(void(NS_NOESCAPE ^)(MASConstraintMaker *make))block {
     NSMutableArray *constraints = [NSMutableArray array];
     for (MAS_VIEW *view in self) {
         NSAssert([view isKindOfClass:[MAS_VIEW class]], @"All objects in the array must be views");
@@ -47,7 +47,7 @@
     MAS_VIEW *tempSuperView = [self mas_commonSuperviewOfViews];
     if (axisType == MASAxisTypeHorizontal) {
         MAS_VIEW *prev;
-        for (int i = 0; i < self.count; i++) {
+        for (NSUInteger i = 0; i < self.count; i++) {
             MAS_VIEW *v = self[i];
             [v mas_makeConstraints:^(MASConstraintMaker *make) {
                 if (prev) {
@@ -67,7 +67,7 @@
     }
     else {
         MAS_VIEW *prev;
-        for (int i = 0; i < self.count; i++) {
+        for (NSUInteger i = 0; i < self.count; i++) {
             MAS_VIEW *v = self[i];
             [v mas_makeConstraints:^(MASConstraintMaker *make) {
                 if (prev) {
@@ -96,7 +96,7 @@
     MAS_VIEW *tempSuperView = [self mas_commonSuperviewOfViews];
     if (axisType == MASAxisTypeHorizontal) {
         MAS_VIEW *prev;
-        for (int i = 0; i < self.count; i++) {
+        for (NSUInteger i = 0; i < self.count; i++) {
             MAS_VIEW *v = self[i];
             [v mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.width.equalTo(@(fixedItemLength));
@@ -118,7 +118,7 @@
     }
     else {
         MAS_VIEW *prev;
-        for (int i = 0; i < self.count; i++) {
+        for (NSUInteger i = 0; i < self.count; i++) {
             MAS_VIEW *v = self[i];
             [v mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.height.equalTo(@(fixedItemLength));

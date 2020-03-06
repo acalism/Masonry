@@ -96,7 +96,7 @@ static NSString * const kMASCellReuseIdentifier = @"kMASCellReuseIdentifier";
 #pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *viewController = self.exampleControllers[indexPath.row];
+    UIViewController *viewController = self.exampleControllers[(NSUInteger) indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMASCellReuseIdentifier forIndexPath:indexPath];
     cell.textLabel.text = viewController.title;
     return cell;
@@ -109,7 +109,7 @@ static NSString * const kMASCellReuseIdentifier = @"kMASCellReuseIdentifier";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *viewController = self.exampleControllers[indexPath.row];
+    UIViewController *viewController = self.exampleControllers[(NSUInteger) indexPath.row];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
