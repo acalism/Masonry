@@ -6,9 +6,11 @@
 //
 //
 
-#import "MASUtilities.h"
-#import "MASConstraintMaker.h"
-#import "MASViewAttribute.h"
+#import <Masonry/MASUtilities.h>
+#import <Masonry/MASConstraintMaker.h>
+#import <Masonry/MASViewAttribute.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, MASAxisType) {
     MASAxisTypeHorizontal,
@@ -70,3 +72,5 @@ typedef NS_ENUM(NSUInteger, MASAxisType) {
 - (void)mas_distributeViewsAlongAxis:(MASAxisType)axisType withFixedItemLength:(CGFloat)fixedItemLength leadSpacing:(CGFloat)leadSpacing tailSpacing:(CGFloat)tailSpacing;
 
 @end
+
+NS_ASSUME_NONNULL_END

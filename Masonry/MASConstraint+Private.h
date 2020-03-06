@@ -6,7 +6,10 @@
 //  Copyright (c) 2014 cloudling. All rights reserved.
 //
 
-#import "MASConstraint.h"
+#import <Masonry/MASConstraint.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol MASConstraintDelegate;
 
@@ -61,6 +64,8 @@
  */
 - (void)constraint:(MASConstraint *)constraint shouldBeReplacedWithConstraint:(MASConstraint *)replacementConstraint;
 
-- (MASConstraint *)constraint:(MASConstraint *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute;
+- (MASConstraint *)constraint:(nullable MASConstraint *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute;
 
 @end
+
+NS_ASSUME_NONNULL_END

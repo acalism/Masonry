@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASConstraint.h"
-#import "MASUtilities.h"
+#import <Masonry/MASConstraint.h>
+#import <Masonry/MASUtilities.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
 
 typedef NS_OPTIONS(NSInteger, MASAttribute) {
     MASAttributeLeft = 1 << NSLayoutAttributeLeft,
@@ -136,3 +139,5 @@ typedef NS_OPTIONS(NSInteger, MASAttribute) {
 - (MASConstraint * (^)(dispatch_block_t))group;
 
 @end
+
+NS_ASSUME_NONNULL_END

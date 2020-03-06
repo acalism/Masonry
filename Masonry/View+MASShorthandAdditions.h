@@ -6,7 +6,9 @@
 //  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
-#import "View+MASAdditions.h"
+#import <Masonry/View+MASAdditions.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 #ifdef MAS_SHORTHAND
 
@@ -136,3 +138,5 @@ MAS_ATTR_FORWARD_AVAILABLE(safeAreaLayoutGuideCenterY, NS_AVAILABLE_IOS(11.0));
 @end
 
 #endif
+
+NS_ASSUME_NONNULL_END

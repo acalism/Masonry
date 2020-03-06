@@ -6,12 +6,15 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASViewConstraint.h"
-#import "MASConstraint+Private.h"
-#import "MASCompositeConstraint.h"
-#import "MASLayoutConstraint.h"
-#import "View+MASAdditions.h"
+#import <Masonry/MASViewConstraint.h>
+#import <Masonry/MASConstraint+Private.h>
+#import <Masonry/MASCompositeConstraint.h>
+#import <Masonry/MASLayoutConstraint.h>
+#import <Masonry/View+MASAdditions.h>
 #import <objc/runtime.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface MAS_VIEW (MASConstraints)
 
@@ -65,7 +68,7 @@ static char kInstalledConstraintsKey;
 
 #pragma mark - NSCoping
 
-- (id)copyWithZone:(NSZone __unused *)zone {
+- (id)copyWithZone:(nullable NSZone __unused *)zone {
     MASViewConstraint *constraint = [[MASViewConstraint alloc] initWithFirstViewAttribute:self.firstViewAttribute];
     constraint.layoutConstant = self.layoutConstant;
     constraint.layoutRelation = self.layoutRelation;
@@ -404,3 +407,5 @@ static char kInstalledConstraintsKey;
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

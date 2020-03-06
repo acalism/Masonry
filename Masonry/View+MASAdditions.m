@@ -6,8 +6,10 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "View+MASAdditions.h"
+#import <Masonry/View+MASAdditions.h>
 #import <objc/runtime.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @implementation MAS_VIEW (MASAdditions)
 
@@ -204,3 +206,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

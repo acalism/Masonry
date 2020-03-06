@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASUtilities.h"
+#import <Masonry/MASUtilities.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  An immutable tuple which stores the view and the related NSLayoutAttribute.
@@ -47,3 +50,5 @@
 - (BOOL)isSizeAttribute;
 
 @end
+
+NS_ASSUME_NONNULL_END

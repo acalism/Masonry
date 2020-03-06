@@ -6,9 +6,11 @@
 //
 //
 
-#import "MASUtilities.h"
-#import "MASConstraintMaker.h"
-#import "MASViewAttribute.h"
+#import <Masonry/MASUtilities.h>
+#import <Masonry/MASConstraintMaker.h>
+#import <Masonry/MASViewAttribute.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 #ifdef MAS_VIEW_CONTROLLER
 
@@ -27,3 +29,5 @@
 @end
 
 #endif
+
+NS_ASSUME_NONNULL_END

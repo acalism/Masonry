@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASViewAttribute.h"
+#import <Masonry/MASViewAttribute.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
 
 @implementation MASViewAttribute
 
@@ -44,3 +47,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

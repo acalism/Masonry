@@ -6,7 +6,11 @@
 //  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
-#import "MASUtilities.h"
+#import <Masonry/MASUtilities.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
+
 
 /**
  *	When you are debugging or printing the constraints attached to a view this subclass
@@ -20,3 +24,5 @@
 @property (nonatomic, strong) id mas_key;
 
 @end
+
+NS_ASSUME_NONNULL_END

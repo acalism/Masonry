@@ -6,9 +6,12 @@
 //  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
-#import "NSLayoutConstraint+MASDebugAdditions.h"
-#import "MASConstraint.h"
-#import "MASLayoutConstraint.h"
+#import <Masonry/NSLayoutConstraint+MASDebugAdditions.h>
+#import <Masonry/MASConstraint.h>
+#import <Masonry/MASLayoutConstraint.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
 
 @implementation NSLayoutConstraint (MASDebugAdditions)
 
@@ -141,3 +144,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
-#import "NSArray+MASAdditions.h"
+#import <Masonry/NSArray+MASAdditions.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
 
 #ifdef MAS_SHORTHAND
 
@@ -39,3 +42,5 @@
 @end
 
 #endif
+
+NS_ASSUME_NONNULL_END

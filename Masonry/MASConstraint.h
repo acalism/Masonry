@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASUtilities.h"
+#import <Masonry/MASUtilities.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *	Enables Constraints to be created with chainable syntax
@@ -266,3 +269,5 @@
 - (MASConstraint * (^)(id offset))mas_offset;
 
 @end
+
+NS_ASSUME_NONNULL_END

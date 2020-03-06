@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASCompositeConstraint.h"
-#import "MASConstraint+Private.h"
+#import <Masonry/MASCompositeConstraint.h>
+#import <Masonry/MASConstraint+Private.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface MASCompositeConstraint () <MASConstraintDelegate>
 
@@ -38,7 +41,7 @@
     [self.childConstraints replaceObjectAtIndex:index withObject:replacementConstraint];
 }
 
-- (MASConstraint *)constraint:(MASConstraint __unused *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
+- (MASConstraint *)constraint:(nullable MASConstraint __unused *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
     id<MASConstraintDelegate> strongDelegate = self.delegate;
     MASConstraint *newConstraint = [strongDelegate constraint:self addConstraintWithLayoutAttribute:layoutAttribute];
     newConstraint.delegate = self;
@@ -181,3 +184,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -6,9 +6,11 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASUtilities.h"
-#import "MASConstraintMaker.h"
-#import "MASViewAttribute.h"
+#import <Masonry/MASUtilities.h>
+#import <Masonry/MASConstraintMaker.h>
+#import <Masonry/MASViewAttribute.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *	Provides constraint maker block
@@ -107,3 +109,5 @@
 - (NSArray *)mas_remakeConstraints:(void(NS_NOESCAPE ^)(MASConstraintMaker *make))block;
 
 @end
+
+NS_ASSUME_NONNULL_END

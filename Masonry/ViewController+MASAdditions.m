@@ -6,7 +6,10 @@
 //
 //
 
-#import "ViewController+MASAdditions.h"
+#import <Masonry/ViewController+MASAdditions.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
 
 #ifdef MAS_VIEW_CONTROLLER
 
@@ -40,3 +43,5 @@
 @end
 
 #endif
+
+NS_ASSUME_NONNULL_END

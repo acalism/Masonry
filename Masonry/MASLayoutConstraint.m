@@ -6,8 +6,12 @@
 //  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
-#import "MASLayoutConstraint.h"
+#import <Masonry/MASLayoutConstraint.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @implementation MASLayoutConstraint
 
 @end
+
+NS_ASSUME_NONNULL_END

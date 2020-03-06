@@ -5,8 +5,11 @@
 //  Created by Nick Tymchenko on 1/20/14.
 //
 
-#import "MASConstraint.h"
-#import "MASConstraint+Private.h"
+#import <Masonry/MASConstraint.h>
+#import <Masonry/MASConstraint+Private.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
 
 #define MASMethodNotImplemented() \
     @throw [NSException exceptionWithName:NSInternalInconsistencyException \
@@ -295,3 +298,5 @@
 - (void)uninstall { MASMethodNotImplemented(); }
 
 @end
+
+NS_ASSUME_NONNULL_END

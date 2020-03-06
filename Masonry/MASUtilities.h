@@ -42,6 +42,10 @@
 
 #endif
 
+
+NS_ASSUME_NONNULL_BEGIN
+
+
 /**
  *	Allows you to attach keys to objects matching the variable names passed.
  *
@@ -134,3 +138,5 @@ static inline id _MASBoxValue(const char *type, ...) {
 }
 
 #define MASBoxValue(value) _MASBoxValue(@encode(__typeof__((value))), (value))
+
+NS_ASSUME_NONNULL_END

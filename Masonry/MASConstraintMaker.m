@@ -6,11 +6,13 @@
 //  Copyright (c) 2013 cloudling. All rights reserved.
 //
 
-#import "MASConstraintMaker.h"
-#import "MASViewConstraint.h"
-#import "MASCompositeConstraint.h"
-#import "MASConstraint+Private.h"
-#import "View+MASAdditions.h"
+#import <Masonry/MASConstraintMaker.h>
+#import <Masonry/MASViewConstraint.h>
+#import <Masonry/MASCompositeConstraint.h>
+#import <Masonry/MASConstraint+Private.h>
+#import <Masonry/View+MASAdditions.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface MASConstraintMaker () <MASConstraintDelegate>
 
@@ -55,7 +57,8 @@
     self.constraints[index] = replacementConstraint;
 }
 
-- (MASConstraint *)constraint:(MASConstraint *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute {
+- (nonnull MASConstraint *)constraint:(nullable MASConstraint *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute
+{
     MASViewAttribute *viewAttribute = [[MASViewAttribute alloc] initWithView:self.view layoutAttribute:layoutAttribute];
     MASViewConstraint *newConstraint = [[MASViewConstraint alloc] initWithFirstViewAttribute:viewAttribute];
     if ([constraint isKindOfClass:MASViewConstraint.class]) {
@@ -258,3 +261,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

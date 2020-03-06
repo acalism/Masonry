@@ -6,8 +6,12 @@
 //
 //
 
-#import "NSArray+MASAdditions.h"
-#import "View+MASAdditions.h"
+#import <Masonry/NSArray+MASAdditions.h>
+#import <Masonry/View+MASAdditions.h>
+
+
+NS_ASSUME_NONNULL_BEGIN
+
 
 @implementation NSArray (MASAdditions)
 
@@ -160,3 +164,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END
